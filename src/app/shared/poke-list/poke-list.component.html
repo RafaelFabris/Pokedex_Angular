@@ -1,3 +1,6 @@
+<poke-search (emitSearch)="getSearch($event)"></poke-search>
+
+<section class="listagem">
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
 <a [routerLink]="['details'  , pokemon.status.id]" class="pokemon" *ngIf="pokemon.status" >
   <section class="pokemon__status">
@@ -14,7 +17,8 @@
   <section class="pokemon__image">
     <img
       [src]="pokemon.status.sprites.other.dream_world.front_default"
-      alt="Bulbasaur">
+      alt="{{pokemon.name}}">
   </section>
 </a>
 </ng-template>
+</section>
